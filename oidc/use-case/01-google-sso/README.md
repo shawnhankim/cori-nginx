@@ -1,9 +1,3 @@
----
-noteId: "fec68350995311ebb0ae0da591b4d39d"
-tags: []
-
----
-
 # Enabling OpenID Connect for Sample Web Application (Google-based SSO)
 
 ## References
