@@ -35,7 +35,7 @@ End User      Browser                  Google    N+                    Web App
 ```
 ### NGINX Plus Configuration
 - Bring your data plane (or use your laptop) and intall nginx
-- Update `/etc/nginx/conf.d/default.conf` as follows:
+- Update `/etc/nginx/conf.d/default.conf` using [this sample](01-nginx-plus-configuration/default.conf) as follows:
   ```
   server {
       listen 80;
