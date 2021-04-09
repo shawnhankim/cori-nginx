@@ -35,7 +35,5 @@ End User      Browser                  Google    N+                    Web App
 ```
 
 ## References
-- Authenticating Users to Existing Applications with OpenID Connect and NGINX Plus
-  - https://www.nginx.com/blog/authenticating-users-existing-applications-openid-connect-nginx-plus/
-- Nginx OpenID Connect Reference Implementation
-  - https://github.com/nginxinc/nginx-openid-connect
+- [Authenticating Users to Existing Applications with OpenID Connect and NGINX Plus](https://www.nginx.com/blog/authenticating-users-existing-applications-openid-connect-nginx-plus/)
+- [Nginx OpenID Connect Reference Implementation](https://github.com/nginxinc/nginx-openid-connect)
