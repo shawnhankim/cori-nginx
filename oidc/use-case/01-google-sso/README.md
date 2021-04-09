@@ -1,4 +1,4 @@
-# Enabling OpenID Connect for Sample Web Application (Google-based SSO)
+# Enabling OpenID Connect for Google-based SSO Application
 
 ## References
 - Authenticating Users to Existing Applications with OpenID Connect and NGINX Plus
