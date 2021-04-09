@@ -53,8 +53,15 @@ End User      Browser                  Google    N+                    Web App
   ```
 
 ### Sample HTML-Based Login Page
-
-
+- Copy [sample login page](02-HTML-login-page/index.html) to `/var/www/public_html/index.html`
+  - `<meta name="google‑signin‑client_id"> tag`
+    - We are using Google's OAuth 2.0 Javascript API to perform the OAuth 2.0 end-user consent and authentication process.
+    - This is what gives us the login button and can detect whether we are logged in or not.
+  - `<script src="/js.cookie.js"> tag`
+    - We need a cookie parser that can extract the identity token from the OAuth 2.0 access token and create a cookie to be sent to the website.
+    - The `Cookies.set` accomplishes this.
+- Note that we didn’t create any content for our private area so a 404 error is to be expected when we try to access it.
+    
 ## References
 - [Authenticating Users to Existing Applications with OpenID Connect and NGINX Plus](https://www.nginx.com/blog/authenticating-users-existing-applications-openid-connect-nginx-plus/)
 - [Nginx OpenID Connect Reference Implementation](https://github.com/nginxinc/nginx-openid-connect)
