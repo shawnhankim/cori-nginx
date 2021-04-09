@@ -1,3 +1,9 @@
+---
+noteId: "12125a21995311ebb0ae0da591b4d39d"
+tags: []
+
+---
+
 # Installing NGINX
 - NGINX  : `http://nginx.org/en/linux_packages.html`
 - Docker : 

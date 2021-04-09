@@ -1,3 +1,9 @@
+---
+noteId: "12125a22995311ebb0ae0da591b4d39d"
+tags: []
+
+---
+
 
 # NGINX Plus High Availability
 Elimanate single points of failure with NGINX Plus
