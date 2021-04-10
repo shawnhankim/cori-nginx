@@ -13,7 +13,25 @@
   ```
   load_module modules/ngx_http_js_module.so;
   ```
-  
+
+## Configuring Okta
+- https://docs.nginx.com/nginx/deployment-guides/single-sign-on/okta/#configuring-okta
+
+
+## Configuring NGINX Plus
+- Create a clone of the nginx-openid-connect GitHub repository
+  ```
+  $ git clone https://github.com/nginxinc/nginx-openid-connect
+  ```
+- Copy these files from the clone to /etc/nginx/conf.d:
+  - frontend.conf
+  - openid_connect.js
+  - openid_connect.server_conf
+- Get the URLs for the auhorization endpoint, and JWK file from the Okta configuration.
+  ```
+  $ curl https://<username>-admin.okta.com/.well-known/openid-configuration | python -m json.tool
+  ```
+  - Sample JSON Web Key (JWK) file
 
 ## References
 - [Enabling Single Sign-On for Proxied Applications with Okta, NGINX Plus, and OpenID Connect](https://docs.nginx.com/nginx/deployment-guides/single-sign-on/okta/#)
