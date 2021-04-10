@@ -61,9 +61,14 @@ End User      Browser                  Google    N+                    Web App
     - We need a cookie parser that can extract the identity token from the OAuth 2.0 access token and create a cookie to be sent to the website.
     - The `Cookies.set` accomplishes this.
 - Note that we didn’t create any content for our private area so a 404 error is to be expected when we try to access it.
-    
+
+
+### Creating a Google OAuth 2.0 Client ID
+- [Access the Google APIs Dashboard](https://console.developers.google.com/apis/dashboard)
+
 ## References
 - [Authenticating Users to Existing Applications with OpenID Connect and NGINX Plus](https://www.nginx.com/blog/authenticating-users-existing-applications-openid-connect-nginx-plus/)
 - [Nginx OpenID Connect Reference Implementation](https://github.com/nginxinc/nginx-openid-connect)
 - [GitHub of Google Certificates](https://github.com/spencerdcarlson/google-certs)
 - [Google Certificates](https://hexdocs.pm/google_certs/readme.html)
+- [Creating NGINX Plus and NGINX Configuration Files](https://docs.nginx.com/nginx/admin-guide/basic-functionality/managing-configuration-files/)
