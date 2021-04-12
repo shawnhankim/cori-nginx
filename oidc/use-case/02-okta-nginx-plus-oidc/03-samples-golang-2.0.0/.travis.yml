@@ -1,0 +1,21 @@
+language: go
+
+go:
+  - 1.14.x
+  - tip
+
+matrix:
+  allow_failures:
+    - go: tip
+
+install:
+  - npm install
+
+script:
+  - npm test
+
+addons:
+  apt:
+    packages:
+    - google-chrome-stable
+    - nodejs

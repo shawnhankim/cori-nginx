@@ -1,0 +1,39 @@
+{
+  "name": "@okta/samples-golang",
+  "version": "1.0.0",
+  "description": "Golang Sample Applications for Okta",
+  "author": "Brian Retterer <brian.retterer@okta.com>",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/okta/samples-golang.git"
+  },
+  "bugs": {
+    "url": "https://github.com/okta/samples-golang/issues"
+  },
+  "homepage": "https://github.com/okta/samples-golang#readme",
+  "devDependencies": {
+    "axios": "^0.21.0",
+    "dotenv": "^8.2.0",
+    "find-process": "^1.4.3",
+    "forever-monitor": "^3.0.2",
+    "jasmine": "^3.0.0",
+    "jasmine-reporters": "^2.3.2",
+    "node-cmd": "^3.0.0",
+    "platform": "^1.3.6",
+    "protractor": "^7.0.0",
+    "wait-on": "^5.2.0"
+  },
+  "scripts": {
+    "test": "npm run test:e2e && npm run test:resource-server",
+    "test:e2e": "npm run test:okta-hosted-login && npm run test:custom-login",
+    "setup-env": "node scripts/setup-env.js",
+    "okta-hosted-login-server": "cd okta-hosted-login && go run main.go",
+    "test:okta-hosted-login": "npm run setup-env && protractor okta-oidc-tck/e2e-tests/okta-hosted-login/conf.js",
+    "custom-login-server": "cd custom-login && go run main.go",
+    "test:custom-login": "npm run setup-env && protractor okta-oidc-tck/e2e-tests/custom-login/conf.js",
+    "resource-server": "cd resource-server && go run main.go",
+    "test:resource-server": "npm run setup-env && jasmine okta-oidc-tck/resource-server/specs/okta-resource-server-spec.js",
+    "pretest": "node ./scripts/update-se-drivers.js && npm run setup-env"
+  }
+}
