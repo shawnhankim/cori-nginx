@@ -75,8 +75,10 @@
 
     location = /_logout {
         # This location is the default value of $oidc_logout_redirect (in case it wasn't configured)
-        default_type text/plain;
-        return 200 "Logged out\n";
+        # default_type text/plain;
+        # return 200 "Logged out\n";
+        root   /usr/share/nginx/html;
+        index  mysports_signout.html;
     }
 
     location @oidc_error {
