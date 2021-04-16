@@ -73,14 +73,6 @@
         js_content oidc.logout;
     }
 
-    location = /_logout {
-        # This location is the default value of $oidc_logout_redirect (in case it wasn't configured)
-        # default_type text/plain;
-        # return 200 "Logged out\n";
-        root   /usr/share/nginx/html/signout;
-        try_files /mysports_signout.html $uri $uri/;
-    }
-
     location @oidc_error {
         # This location is called when oidcAuth() or oidcCodeExchange() returns an error
         status_zone "OIDC error";
