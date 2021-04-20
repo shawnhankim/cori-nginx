@@ -1,0 +1,41 @@
+FROM docker.io/nginx/unit:1.23.0-go1.15
+# Alternatively, you can download the base image from AWS ECR:
+# FROM public.ecr.aws/nginx/unit:1.23.0-go1.15
+
+# port used by the listener in config.json
+EXPOSE 8081
+
+# application setup
+RUN mkdir /www/ && echo '                                                  \
+    package main;                                                          \
+    import (                                                               \
+        "io";                                                              \
+        "net/http";                                                        \
+        "unit.nginx.org/go"                                                \
+    );                                                                     \
+    func main() {                                                          \
+        http.HandleFunc("/",func (w http.ResponseWriter, r *http.Request) {\
+            io.WriteString(w, "Hello, Go on Unit!")                        \
+        });                                                                \
+        unit.ListenAndServe(":8080", nil)                                  \
+    }                                                                      \
+    ' > /www/app.go                                                        \
+    && go build -o /www/app /www/app.go                                    \
+# final cleanup
+    && rm /www/app.go
+
+# prepare the app config for Unit
+RUN echo '{                                                                \
+    "listeners": {                                                         \
+        "*:8080": {                                                        \
+            "pass": "applications/go_app"                                  \
+        }                                                                  \
+    },                                                                     \
+    "applications": {                                                      \
+        "go_app": {                                                        \
+            "type": "external",                                            \
+            "working_directory": "/www/",                                  \
+            "executable": "/www/app"                                       \
+        }                                                                  \
+    }                                                                      \
+    }' > /docker-entrypoint.d/config.json                                  \
