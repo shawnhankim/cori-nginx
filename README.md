@@ -1,23 +1,18 @@
----
-noteId: "f7212580afb811ebb3475b2b3fa750d6"
-tags: []
-
----
-
 # Nginx Examples
 This repo provides the following examples using NGINX and NGINX Plus.
 
-- Authentication
+# Authentication
   - API Key
   - OAuth 2.0
   - OpenID Connect (OIDC)
   
-- NGINX Plus
+# NGINX Plus
 
-- NGINX Unit
+# NGINX Unit
 
-- [NGINX Ingress Controller](https://www.nginx.com/products/nginx-ingress-controller/) in Kubernetes and containerized environments
+# [NGINX Ingress Controller](https://www.nginx.com/products/nginx-ingress-controller/) in Kubernetes and containerized environments
 
-- [NGINX Service Mesh](https://www.nginx.com/blog/introducing-nginx-service-mesh/)
+# [NGINX Service Mesh](https://www.nginx.com/blog/introducing-nginx-service-mesh/)
 
-- High Availability (HA)
+# High Availability (HA)
+
