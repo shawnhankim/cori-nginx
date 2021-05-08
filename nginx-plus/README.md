@@ -1,3 +1,9 @@
+---
+noteId: "f7718f70afb811ebb3475b2b3fa750d6"
+tags: []
+
+---
+
 # Installing NGINX Plus on Debian and Ubuntu
 
 - Create the /etc/ssl/nginx directory:

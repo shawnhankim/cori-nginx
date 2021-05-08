@@ -1,3 +1,9 @@
+---
+noteId: "f7212580afb811ebb3475b2b3fa750d6"
+tags: []
+
+---
+
 # Nginx Examples
 This repo provides the following examples using NGINX and NGINX Plus.
 

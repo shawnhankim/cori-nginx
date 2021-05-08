@@ -1,3 +1,9 @@
+---
+noteId: "f720d760afb811ebb3475b2b3fa750d6"
+tags: []
+
+---
+
 # OAuth 2.0
 
 - Reference
