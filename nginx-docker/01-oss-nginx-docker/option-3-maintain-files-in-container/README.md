@@ -1,3 +1,9 @@
+---
+noteId: "f7716861afb811ebb3475b2b3fa750d6"
+tags: []
+
+---
+
 # Maintain NGINX Files in Container
 
 - We can’t use SSH to access the NGINX container, so if we want to edit the content or configuration files directly we have to create a helper container that has shell access.

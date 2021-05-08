@@ -1,3 +1,9 @@
+---
+noteId: "f7716860afb811ebb3475b2b3fa750d6"
+tags: []
+
+---
+
 # [Using the NGINX Open Source Docker Image](https://www.nginx.com/blog/deploying-nginx-nginx-plus-docker/#Using-the-NGINX-Open-Source-Docker-Image)
 
 - Launch an instance of NGINX running in a container and using the default NGINX configuration, run this command:

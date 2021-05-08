@@ -1,3 +1,9 @@
+---
+noteId: "f7714150afb811ebb3475b2b3fa750d6"
+tags: []
+
+---
+
 # Managing NGINX Content and Configuration Files
 
 - Copy the content and configuration files from a local directory on the Docker host during container creation.

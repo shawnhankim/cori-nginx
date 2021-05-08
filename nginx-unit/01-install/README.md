@@ -1,3 +1,9 @@
+---
+noteId: "f7718f71afb811ebb3475b2b3fa750d6"
+tags: []
+
+---
+
 # NGINX Plus - Dynamic Web Application Server
 
 ## Obtaining Sources

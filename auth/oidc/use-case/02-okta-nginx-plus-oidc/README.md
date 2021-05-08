@@ -1,3 +1,9 @@
+---
+noteId: "f771dd90afb811ebb3475b2b3fa750d6"
+tags: []
+
+---
+
 # Enabling SSO for Proxied Apps w/ Okta, Nginx+ and OIDC
 - This example provides how to enable SSO for apps being proxied by Nginx Plus.
 - The solution uses OIDC as the authentication mechanism, with Okta as the IDP, and Nginx Plus as the relying party.
