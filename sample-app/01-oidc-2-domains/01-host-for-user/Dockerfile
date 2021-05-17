@@ -75,12 +75,22 @@ COPY build-context/api-server     /etc/nginx/api-server
 COPY build-context/nginx-conf/key /etc/nginx/key
 
 # Forward request logs to Docker log collector
-RUN ln -sf /dev/stdout /var/log/nginx/access.log \
-    && ln -sf /dev/stderr /var/log/nginx/error.log
+RUN  ln -sf /dev/stdout /var/log/nginx/access.log \
+     && ln -sf /dev/stderr /var/log/nginx/error.log
+
+RUN  apt-get update -y && \
+     apt-get install -y python-pip python-dev
+COPY build-context/requirements.txt /etc/nginx/api-server/requirements.txt
+
+WORKDIR /etc/nginx/api-server
+
+RUN pip install -r requirements.txt
+
+ENTRYPOINT [ "python" ]
 
 EXPOSE 80
 EXPOSE 443
 
 STOPSIGNAL SIGTERM
 
-CMD ["nginx", "-g", "daemon off;"]
+CMD ["nginx", "-g", "daemon off;", "app.py"]
