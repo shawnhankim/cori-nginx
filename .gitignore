@@ -1,2 +1,3 @@
 *.crt
 *.key
+credentials.conf
