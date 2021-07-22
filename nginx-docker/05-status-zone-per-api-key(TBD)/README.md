@@ -1,4 +1,4 @@
-# # Metrics Per-Location per-API-Key on NGINX Plus
+# Metrics Per-Location per-API-Key on NGINX Plus
 
 ## Creating a Docker Image of NGINX Plus
 - Create a [Docerfile](./Dockerfile).
